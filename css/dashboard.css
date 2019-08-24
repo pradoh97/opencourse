@@ -1,0 +1,126 @@
+/* Tableta y escritorio */
+@media (min-width: 700px){
+	.busqueda{
+		flex-flow: row nowrap;
+	}
+	.busqueda input{
+		flex-grow: 1;
+	}
+	.categorias{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+	.busqueda{
+		flex-flow: column;
+	}
+	.categorias{
+		flex-flow: column wrap;
+	}
+	.categorias{
+		display: none;
+	}
+}
+
+/* Categorías de cursos y grupos */
+.categorias{
+	border: 2px solid var(--color-enfasis);
+	border-top: 0;
+}
+.categorias a{
+	color: var(--color-normal);
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+	padding: 0.8em;
+	flex-grow: 1;
+}
+.categorias a:hover{
+	color: var(--color-contraste);
+	background-color: var(--color-normal);
+}
+#alternar-categorias{
+	cursor: pointer;
+	padding: 0.5em;
+	border-radius: 0;
+	border: 0;
+	background-color: var(--color-normal);
+	color: var(--color-contraste);
+}
+#alternar-categorias:active{
+	box-shadow: 0 0 1000px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Formulario de búsqueda */
+.busqueda{
+	display: flex;
+		margin-top: 1em;
+}
+.busqueda button, .busqueda input{
+	height: 3em;
+	font-weight: 100;
+	border-radius: 0;
+	padding: 0 1em;
+}
+.busqueda button{
+	cursor: pointer;
+	border: 0;
+	background-color: var(--color-enfasis);
+	color: var(--color-contraste);
+}
+.busqueda button:active{
+	box-shadow: 0 0 1000px rgba(255, 255, 255, 0.2) inset;
+}
+.busqueda input{
+	border: 1px solid rgb(200, 200, 200);
+	background-color: var(--color-contraste);
+}
+
+/* Grilla de cursos */
+.grilla{
+	max-width: 100%;
+	margin: 0.5em 0;
+	display: grid;
+	grid-gap: 1em;
+}
+.horizontal{
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.infinita.horizontal{
+	grid-auto-columns: minmax(300px,min-content);
+	overflow-x: auto;
+	grid-auto-flow: column;
+	grid-auto-rows: 300px;
+}
+.tarjeta{
+	border: 1px solid rgb(200, 200, 200);
+	border-bottom: 3px solid var(--color-enfasis);
+	overflow: hidden;
+}
+.tarjeta figure{
+	margin: 0;
+}
+.tarjeta figure img{
+	width: 100%;
+	object-fit: cover;
+	transition: opacity 0.3s;
+}
+.tarjeta figure img:hover{
+	opacity: 0.7;
+}
+.tarjeta figure figcaption{
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+.tarjeta figure figcaption, .tarjeta .resumen{
+	padding-left: 1em;
+	padding-right: 0.5em;
+	box-sizing: border-box;
+}
+.tarjeta .resumen{
+	display: block;
+	text-align: justify;
+}
