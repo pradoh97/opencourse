@@ -1,5 +1,10 @@
 /* Tableta y escritorio */
 @media (min-width: 700px){
+.horizontal {
+	grid-auto-columns: minmax(300px,min-content);
+	overflow-x: auto;
+	grid-auto-flow: column;
+}
 	.busqueda{
 		flex-flow: row nowrap;
 	}
@@ -9,7 +14,9 @@
 	.categorias{
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: center;
+	}
+	.categorias a{
+		flex-grow: 1;
 	}
 }
 
@@ -24,8 +31,10 @@
 	.categorias{
 		display: none;
 	}
+	.horizontal{
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	}
 }
-
 /* Categorías de cursos y grupos */
 .categorias{
 	border: 2px solid var(--color-enfasis);
@@ -36,7 +45,6 @@
 	transition-property: background-color, color;
 	transition-duration: 0.3s;
 	padding: 0.8em;
-	flex-grow: 1;
 }
 .categorias a:hover{
 	color: var(--color-contraste);
@@ -81,19 +89,18 @@
 
 /* Grilla de cursos */
 .grilla{
-	max-width: 100%;
+
 	margin: 0.5em 0;
 	display: grid;
 	grid-gap: 1em;
 }
-.horizontal{
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-.infinita.horizontal{
-	grid-auto-columns: minmax(300px,min-content);
-	overflow-x: auto;
-	grid-auto-flow: column;
+.infinita.horizontal {
+
+	margin: 0.5em 0;
+	display: grid;
+	grid-gap: 1em;
 	grid-auto-rows: 300px;
+	overflow-x: auto;
 }
 .tarjeta{
 	border: 1px solid rgb(200, 200, 200);
