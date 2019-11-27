@@ -1,9 +1,8 @@
 /* Tableta y escritorio */
 @media (min-width: 700px){
 .horizontal {
-	grid-auto-columns: minmax(300px,min-content);
-	overflow-x: auto;
-	grid-auto-flow: column;
+	grid-auto-rows: 400px;
+	grid-template-columns: repeat(auto-fill, minmax(300px,max-content));
 }
 	.busqueda{
 		flex-flow: row nowrap;
@@ -89,23 +88,27 @@
 
 /* Grilla de cursos */
 .grilla{
-
 	margin: 0.5em 0;
 	display: grid;
 	grid-gap: 1em;
 }
 .infinita.horizontal {
-
+	grid-auto-columns: minmax(300px,max-content);
+	grid-auto-flow: column;
 	margin: 0.5em 0;
 	display: grid;
 	grid-gap: 1em;
 	grid-auto-rows: 300px;
 	overflow-x: auto;
+	box-sizing: border-box;
+	overflow-y: hidden;
 }
 .tarjeta{
 	border: 1px solid rgb(200, 200, 200);
 	border-bottom: 3px solid var(--color-enfasis);
-	overflow: hidden;
+}
+.tarjeta:hover{
+		overflow-y: auto;
 }
 .tarjeta figure{
 	margin: 0;
