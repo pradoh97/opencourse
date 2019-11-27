@@ -100,12 +100,12 @@
 	grid-gap: 1em;
 	grid-auto-rows: 300px;
 	overflow-x: auto;
-	box-sizing: border-box;
 	overflow-y: hidden;
 }
 .tarjeta{
 	border: 1px solid rgb(200, 200, 200);
 	border-bottom: 3px solid var(--color-enfasis);
+	overflow-y: hidden;
 }
 .tarjeta:hover{
 		overflow-y: auto;
