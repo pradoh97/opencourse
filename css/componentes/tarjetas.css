@@ -1,0 +1,31 @@
+.tarjeta{
+	display: flex;
+	flex-flow: column;
+	border: 1px solid rgb(200, 200, 200);
+	border-bottom: 3px solid var(--color-enfasis);
+}
+.tarjeta img{
+	width: 100%;
+	object-fit: cover;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+.tarjeta:hover img{
+	opacity: 0.7;
+}
+.tarjeta a{
+	display: flex;
+	flex-flow: column;
+	flex-grow: 1;
+}
+.tarjeta .informacion .titulo, .tarjeta .informacion .instructor, .tarjeta .informacion .resumen{
+	margin:0;
+	padding: 0;
+}
+.tarjeta .informacion .titulo{
+	font-weight:700;
+}
+.tarjeta .informacion .instructor{
+	margin-bottom: 1.5em;
+	font-weight: 400;
+}

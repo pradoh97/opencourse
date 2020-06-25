@@ -1,0 +1,16 @@
+.horizontal {
+	grid-auto-columns: minmax(300px,400px);
+}
+.grilla{
+	margin: 0.5em 0;
+	display: grid;
+	grid-gap: 1em;
+}
+.infinita.horizontal {
+	grid-auto-flow: column;
+	margin: 0.5em 0;
+	display: grid;
+	grid-gap: 1em;
+	overflow-x: auto;
+
+}

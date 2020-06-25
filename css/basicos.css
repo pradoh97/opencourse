@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 :root {
 	font-size: calc(0.8em + 0.4vmax);
   --color-enfasis: rgb(0, 204, 102);
@@ -35,6 +35,7 @@ i{
 button::-moz-focus-inner{
   border: none;
 }
+
 /* Escritorio */
 @media (min-width: 1024px){
 	.navegacion{
@@ -82,7 +83,7 @@ button::-moz-focus-inner{
 
 /* Cabecera */
 header{
-	z-index: 1;
+	z-index: 10;
 	background: var(--color-contraste);
   display: flex;
   flex-flow: row nowrap;
